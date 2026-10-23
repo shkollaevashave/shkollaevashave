@@ -1,9 +1,15 @@
 ---
 title: Vizitoni
-intro: "[Si duket një vizitë: sa zgjat, çfarë përfshin, a ka guidë.]"
+intro: "Restaurimi i ndërtesës është në vazhdim, por vizitat mund të organizohen me rezervim."
 ---
 
 {% include hours.html %}
+
+## Çfarë të shkruani në email
+
+1. datat që ju përshtaten (jepni më shumë se një)
+2. sa persona do të vijnë
+3. një numër telefoni
 
 ## Si të vini
 
@@ -19,4 +25,4 @@ intro: "[Si duket një vizitë: sa zgjat, çfarë përfshin, a ka guidë.]"
 
 ## Aksesueshmëria
 
-[A ka shkallë? A mund të hyjë një karrocë? Kjo pyetje bëhet shpesh.]
+[A ka shkallë? A mund të hyjë një karrocë? Gjatë restaurimit, a ka pjesë të ndërtesës që nuk mund të vizitohen?]

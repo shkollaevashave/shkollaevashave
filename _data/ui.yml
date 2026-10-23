@@ -10,6 +10,7 @@ sq:
   months: [janar, shkurt, mars, prill, maj, qershor, korrik, gusht, shtator, tetor, nëntor, dhjetor]
   closed: "Mbyllur"
   hours_title: "Oraret e vizitave"
+  visits_title: "Vizitat"
   latest_news: "Lajmet e fundit"
   all_news: "Të gjitha lajmet"
   read_more: "Lexo më shumë"

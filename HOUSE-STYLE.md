@@ -63,7 +63,7 @@ image_credit: "Emri i fotografit"
 
 ## Changing opening hours
 
-Edit `_data/info.yml` only. The home page, Visit page, Contact page and the Google listing data all read from it. Then update the Google Business Profile to match, by hand.
+While there are no fixed hours, `by_appointment: true` in `_data/info.yml` shows a "visits by arrangement" notice instead of a table. When hours are set, fill in the `hours` list and set `by_appointment: false`. Edit `_data/info.yml` only. The home page, Visit page, Contact page and the Google listing data all read from it. Then update the Google Business Profile to match, by hand.
 
 ## Adding English later
 

@@ -1,11 +1,21 @@
-{%- comment -%}No indentation or blank lines here: this is included inside Markdown pages, which would turn indented HTML into a code block.{%- endcomment -%}
+{%- comment -%}No indentation or blank lines here: this is included inside Markdown pages, which would turn indented HTML into a code block. Shows a "by appointment" notice or the hours table, depending on by_appointment in _data/info.yml.{%- endcomment -%}
 {%- assign t = site.data.ui[page.lang] | default: site.data.ui.sq -%}
+{%- assign i = site.data.info -%}
+{%- if i.by_appointment -%}
+<div class="visits">
+<h2>{{ t.visits_title }}</h2>
+<p>{{ i.visits_text }}</p>
+<p>Na shkruani te <a href="mailto:{{ i.email }}?subject={{ i.visit_subject | uri_escape }}">{{ i.email }}</a> {{ i.notice }} përpara.</p>
+<p class="note">{{ i.visits_future }}</p>
+</div>
+{%- else -%}
 <table class="hours">
 <caption>{{ t.hours_title }}</caption>
 <tbody>
-{%- for h in site.data.info.hours %}
+{%- for h in i.hours %}
 <tr><th scope="row">{{ h.label }}</th><td>{% if h.open != "" %}{{ h.open }}–{{ h.close }}{% else %}<span class="closed">{{ t.closed }}</span>{% endif %}</td></tr>
 {%- endfor %}
 </tbody>
 </table>
-{% if site.data.info.hours_note %}<p class="note">{{ site.data.info.hours_note }}</p>{% endif %}
+{% if i.hours_note != "" %}<p class="note">{{ i.hours_note }}</p>{% endif %}
+{%- endif %}

@@ -18,7 +18,8 @@ Only output on the home page.
     "addressLocality": {{ i.address.city | jsonify }},
     "postalCode": {{ i.address.postcode | jsonify }},
     "addressCountry": "AL"
-  },
+  }
+  {%- unless i.by_appointment %},
   "openingHoursSpecification": [
   {%- assign first = true -%}
   {%- for h in i.hours -%}{%- if h.open != "" -%}
@@ -27,6 +28,7 @@ Only output on the home page.
     {%- assign first = false -%}
   {%- endif -%}{%- endfor %}
   ]
+  {%- endunless %}
 }
 </script>
 {%- endif -%}

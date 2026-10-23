@@ -10,24 +10,34 @@ address:
   postcode: "[Kodi postar]"
   country: "Shqipëri"
 
-email: "info@shkollaevashave.al"
+email: "shkollaevashave@proton.me"
 phone: "+355 [numri]"
 
-# Pre-filled subject line for school trip enquiries
+# Pre-filled subject lines for email links
 trip_subject: "Kërkesë për udhëtim shkollor"
+visit_subject: "Kërkesë për vizitë"
 
-# Opening hours. Use 24-hour times; leave open/close empty for closed days.
+# Visits. While there are no fixed opening hours, keep by_appointment: true.
+# The site then shows the notice below instead of an hours table,
+# and tells Google nothing about opening hours.
+by_appointment: true
+notice: "të paktën dy javë"
+visits_text: "Shkolla ende nuk ka orar të rregullt vizitash. Vizitat organizohen me rezervim paraprak me email."
+visits_future: "Oraret e rregullta do të njoftohen këtu."
+
+# Fixed opening hours, for later. Set by_appointment: false to show them.
+# Use 24-hour times; leave open/close empty for closed days.
 # "day" is the schema.org name, used for Google. Do not translate it.
 hours:
-  - { label: "E hënë",    day: Monday,    open: "",      close: "" }
-  - { label: "E martë",   day: Tuesday,   open: "09:00", close: "16:00" }
-  - { label: "E mërkurë", day: Wednesday, open: "09:00", close: "16:00" }
-  - { label: "E enjte",   day: Thursday,  open: "09:00", close: "16:00" }
-  - { label: "E premte",  day: Friday,    open: "09:00", close: "16:00" }
-  - { label: "E shtunë",  day: Saturday,  open: "10:00", close: "14:00" }
-  - { label: "E diel",    day: Sunday,    open: "",      close: "" }
+  - { label: "E hënë",    day: Monday,    open: "", close: "" }
+  - { label: "E martë",   day: Tuesday,   open: "", close: "" }
+  - { label: "E mërkurë", day: Wednesday, open: "", close: "" }
+  - { label: "E enjte",   day: Thursday,  open: "", close: "" }
+  - { label: "E premte",  day: Friday,    open: "", close: "" }
+  - { label: "E shtunë",  day: Saturday,  open: "", close: "" }
+  - { label: "E diel",    day: Sunday,    open: "", close: "" }
 
-hours_note: "Hyrja është falas. Grupet duhet të rezervojnë paraprakisht."
+hours_note: ""
 
 # Paste the "Embed a map" link from Google Maps here (the src="..." value only)
 map_embed: ""

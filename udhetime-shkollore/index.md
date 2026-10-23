@@ -22,7 +22,7 @@ Na dërgoni një email me:
 3. dy data që ju përshtaten
 4. një numër telefoni
 
-Ju përgjigjemi brenda [3] ditëve pune.
+Ju lutemi na shkruani {{ site.data.info.notice }} përpara datës së vizitës. Ju përgjigjemi brenda [3] ditëve pune.
 
 {% include trip-email.html %}
 
