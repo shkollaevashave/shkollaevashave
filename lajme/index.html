@@ -1,0 +1,17 @@
+---
+title: Lajme
+---
+{%- assign t = site.data.ui.sq -%}
+{% if site.posts.size > 0 %}
+<ul class="news-list full">
+  {% for post in site.posts %}
+  <li>
+    <p class="meta">{% include date.html date=post.date %}</p>
+    <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
+    <p>{{ post.excerpt | strip_html | truncatewords: 35 }}</p>
+  </li>
+  {% endfor %}
+</ul>
+{% else %}
+<p>{{ t.no_news }}</p>
+{% endif %}

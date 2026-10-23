@@ -1,0 +1,32 @@
+{%- comment -%}
+Tells Google and Maps the address and opening hours, read from _data/info.yml.
+Only output on the home page.
+{%- endcomment -%}
+{%- if page.url == "/" -%}
+{%- assign i = site.data.info -%}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Museum",
+  "name": {{ i.name | jsonify }},
+  "url": {{ site.url | append: site.baseurl | jsonify }},
+  "email": {{ i.email | jsonify }},
+  "telephone": {{ i.phone | jsonify }},
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": {{ i.address.street | jsonify }},
+    "addressLocality": {{ i.address.city | jsonify }},
+    "postalCode": {{ i.address.postcode | jsonify }},
+    "addressCountry": "AL"
+  },
+  "openingHoursSpecification": [
+  {%- assign first = true -%}
+  {%- for h in i.hours -%}{%- if h.open != "" -%}
+    {%- unless first %},{% endunless %}
+    {"@type": "OpeningHoursSpecification", "dayOfWeek": "https://schema.org/{{ h.day }}", "opens": "{{ h.open }}", "closes": "{{ h.close }}"}
+    {%- assign first = false -%}
+  {%- endif -%}{%- endfor %}
+  ]
+}
+</script>
+{%- endif -%}

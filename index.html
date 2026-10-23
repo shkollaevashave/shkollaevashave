@@ -1,0 +1,38 @@
+---
+layout: default
+title: Kreu
+banner: /assets/img/banner-shkolla.jpg
+banner_alt: "Fotografi e vjetër bardhezi: nxënëse dhe mësues para ndërtesës së shkollës, disa të ulura në shkallët e jashtme"
+banner_caption: "Nxënëset dhe mësuesit para shkollës. [Viti. Burimi i fotos.]"
+---
+{%- assign t = site.data.ui.sq -%}
+<section class="hero">
+  <h1>{{ site.data.info.name }}</h1>
+  <p class="intro">[Një fjali për ndërtesën: kur u hap shkolla, pse ka rëndësi dhe çfarë mund të shohë vizitori sot.]</p>
+  <p>
+    <a class="button" href="{{ '/vizitoni/' | relative_url }}">Planifikoni vizitën</a>
+    <a class="button ghost" href="{{ '/udhetime-shkollore/' | relative_url }}">Udhëtime shkollore</a>
+  </p>
+</section>
+
+<div class="grid">
+  <section>
+    {% include hours.html %}
+  </section>
+  <section>
+    <h2>{{ t.latest_news }}</h2>
+    {% if site.posts.size > 0 %}
+    <ul class="news-list">
+      {% for post in site.posts limit:3 %}
+      <li>
+        <p class="meta">{% include date.html date=post.date %}</p>
+        <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+      </li>
+      {% endfor %}
+    </ul>
+    <p><a href="{{ '/lajme/' | relative_url }}">{{ t.all_news }} →</a></p>
+    {% else %}
+    <p>{{ t.no_news }}</p>
+    {% endif %}
+  </section>
+</div>

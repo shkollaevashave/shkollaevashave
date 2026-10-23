@@ -1,0 +1,21 @@
+<!doctype html>
+{%- assign t = site.data.ui[page.lang] | default: site.data.ui.sq -%}
+<html lang="{{ page.lang | default: site.lang }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+  {% seo %}
+  {% feed_meta %}
+  {% include schema.html %}
+</head>
+<body>
+  <a class="skip" href="#main">{{ t.skip }}</a>
+  {% include header.html %}
+  {% if page.banner %}{% include banner.html %}{% endif %}
+  <main id="main" class="wrap">
+    {{ content }}
+  </main>
+  {% include footer.html %}
+</body>
+</html>

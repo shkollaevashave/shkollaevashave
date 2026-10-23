@@ -1,0 +1,34 @@
+# One place for facts that appear on several pages.
+# Change them here and every page updates.
+
+name: "Shkolla e vashave"
+institute: "[EMRI I INSTITUTIT]"
+
+address:
+  street: "[Rruga dhe numri]"
+  city: "[Qyteti]"
+  postcode: "[Kodi postar]"
+  country: "Shqipëri"
+
+email: "info@shkollaevashave.al"
+phone: "+355 [numri]"
+
+# Pre-filled subject line for school trip enquiries
+trip_subject: "Kërkesë për udhëtim shkollor"
+
+# Opening hours. Use 24-hour times; leave open/close empty for closed days.
+# "day" is the schema.org name, used for Google. Do not translate it.
+hours:
+  - { label: "E hënë",    day: Monday,    open: "",      close: "" }
+  - { label: "E martë",   day: Tuesday,   open: "09:00", close: "16:00" }
+  - { label: "E mërkurë", day: Wednesday, open: "09:00", close: "16:00" }
+  - { label: "E enjte",   day: Thursday,  open: "09:00", close: "16:00" }
+  - { label: "E premte",  day: Friday,    open: "09:00", close: "16:00" }
+  - { label: "E shtunë",  day: Saturday,  open: "10:00", close: "14:00" }
+  - { label: "E diel",    day: Sunday,    open: "",      close: "" }
+
+hours_note: "Hyrja është falas. Grupet duhet të rezervojnë paraprakisht."
+
+# Paste the "Embed a map" link from Google Maps here (the src="..." value only)
+map_embed: ""
+map_link: "https://maps.google.com/?q=[koordinatat]"

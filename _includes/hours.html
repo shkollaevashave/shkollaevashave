@@ -1,0 +1,11 @@
+{%- comment -%}No indentation or blank lines here: this is included inside Markdown pages, which would turn indented HTML into a code block.{%- endcomment -%}
+{%- assign t = site.data.ui[page.lang] | default: site.data.ui.sq -%}
+<table class="hours">
+<caption>{{ t.hours_title }}</caption>
+<tbody>
+{%- for h in site.data.info.hours %}
+<tr><th scope="row">{{ h.label }}</th><td>{% if h.open != "" %}{{ h.open }}–{{ h.close }}{% else %}<span class="closed">{{ t.closed }}</span>{% endif %}</td></tr>
+{%- endfor %}
+</tbody>
+</table>
+{% if site.data.info.hours_note %}<p class="note">{{ site.data.info.hours_note }}</p>{% endif %}

@@ -1,0 +1,19 @@
+{%- assign t = site.data.ui[page.lang] | default: site.data.ui.sq -%}
+<header class="site-header">
+  <div class="wrap bar">
+    <a class="brand" href="{{ '/' | relative_url }}">{{ site.data.info.name }}</a>
+    <details class="nav">
+      <summary>{{ t.menu }}</summary>
+      <nav>
+        <ul>
+        {% for item in t.nav %}
+          {%- assign here = false -%}
+          {%- if item.url == "/" and page.url == "/" -%}{%- assign here = true -%}
+          {%- elsif item.url != "/" and page.url contains item.url -%}{%- assign here = true -%}{%- endif -%}
+          <li><a href="{{ item.url | relative_url }}"{% if here %} aria-current="page"{% endif %}>{{ item.title }}</a></li>
+        {% endfor %}
+        </ul>
+      </nav>
+    </details>
+  </div>
+</header>

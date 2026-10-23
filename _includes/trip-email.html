@@ -1,0 +1,2 @@
+{%- assign i = site.data.info -%}
+<a class="button" href="mailto:{{ i.email }}?subject={{ i.trip_subject | uri_escape }}">{{ include.label | default: "Dërgoni kërkesën me email" }}</a>

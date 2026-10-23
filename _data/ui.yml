@@ -1,0 +1,21 @@
+# Interface words, by language. Add an "en:" block when the English version starts.
+sq:
+  nav:
+    - { title: "Kreu",               url: "/" }
+    - { title: "Historia",           url: "/historia/" }
+    - { title: "Vizitoni",           url: "/vizitoni/" }
+    - { title: "Udhëtime shkollore", url: "/udhetime-shkollore/" }
+    - { title: "Lajme",              url: "/lajme/" }
+    - { title: "Kontakt",            url: "/kontakt/" }
+  months: [janar, shkurt, mars, prill, maj, qershor, korrik, gusht, shtator, tetor, nëntor, dhjetor]
+  closed: "Mbyllur"
+  hours_title: "Oraret e vizitave"
+  latest_news: "Lajmet e fundit"
+  all_news: "Të gjitha lajmet"
+  read_more: "Lexo më shumë"
+  back_to_news: "← Kthehu te lajmet"
+  no_news: "Ende nuk ka lajme."
+  email_us: "Na shkruani"
+  menu: "Menyja"
+  skip: "Kalo te përmbajtja"
+  footer_owned: "Ndërtesë në pronësi të"

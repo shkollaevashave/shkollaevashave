@@ -1,0 +1,15 @@
+{%- assign t = site.data.ui[page.lang] | default: site.data.ui.sq -%}
+{%- assign i = site.data.info -%}
+<footer class="site-footer">
+  <div class="wrap cols">
+    <div>
+      <p class="brand">{{ i.name }}</p>
+      <p>{{ i.address.street }}<br>{{ i.address.postcode }} {{ i.address.city }}, {{ i.address.country }}</p>
+    </div>
+    <div>
+      <p><a href="mailto:{{ i.email }}">{{ i.email }}</a><br>
+      <a href="tel:{{ i.phone | remove: ' ' }}">{{ i.phone }}</a></p>
+      <p class="small">{{ t.footer_owned }} {{ i.institute }}</p>
+    </div>
+  </div>
+</footer>

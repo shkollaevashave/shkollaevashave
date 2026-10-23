@@ -1,0 +1,16 @@
+---
+layout: default
+---
+{%- assign t = site.data.ui[page.lang] | default: site.data.ui.sq -%}
+<article class="post">
+  <p class="meta">{% include date.html date=page.date %}</p>
+  <h1>{{ page.title }}</h1>
+  {% if page.image %}
+  <figure class="lead">
+    <img src="{{ page.image | relative_url }}" alt="{{ page.image_alt }}">
+    {% if page.image_credit %}<figcaption>Foto: {{ page.image_credit }}</figcaption>{% endif %}
+  </figure>
+  {% endif %}
+  {{ content }}
+  <p><a href="{{ '/lajme/' | relative_url }}">{{ t.back_to_news }}</a></p>
+</article>
