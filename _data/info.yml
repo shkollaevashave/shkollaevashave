@@ -2,7 +2,10 @@
 # Change them here and every page updates.
 
 name: "Shkolla e Vashave"
-institute: "IAPS"
+institute: "ISShP"
+institute_full: "Instituti për Studime Shqiptare dhe Protestante"
+# Genitive form, used after "në pronësi të" (owned by)
+institute_of: "Institutit për Studime Shqiptare dhe Protestante (ISShP)"
 
 address:
   street: "Rruga Stefan Andrea"

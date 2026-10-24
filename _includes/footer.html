@@ -9,7 +9,7 @@
     <div>
       <p><a href="mailto:{{ i.email }}">{{ i.email }}</a>{% if i.phone != "" %}<br>
       <a href="tel:{{ i.phone | remove: ' ' }}">{{ i.phone }}</a>{% endif %}</p>
-      <p class="small">{{ t.footer_owned }} {{ i.institute }}</p>
+      <p class="small">{{ t.footer_owned }} {{ i.institute_of }}</p>
     </div>
   </div>
 </footer>

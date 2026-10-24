@@ -35,12 +35,12 @@ Burimet ndryshojnë për vitet e fundit të shkollës në Korçë. Në vitin 192
 
 ## Ndërtesa sot
 
-Ndërtesa është një shtëpi dykatëshe, monument kulture, në rrugën Stefan Andrea, pranë bulevardit Republika në Korçë. Sot është në pronësi të IAPS dhe po restaurohet.
+Ndërtesa është një shtëpi dykatëshe, monument kulture, në rrugën Stefan Andrea, pranë bulevardit Republika në Korçë. Sot është në pronësi të Institutit për Studime Shqiptare dhe Protestante (ISShP) dhe po restaurohet.
 
 Më 22 tetor 2026 u bë hapja zyrtare e ndërtesës, një ditë para 135-vjetorit të shkollës: më 23 tetor 1891 tri vajza hynë për herë të parë në klasën e Sevastit.
 
 ## Burimet
 
-- Quanrud, *Gerasim Kyrias and the Albanian National Awakening, 1858–1894* (IAPS, 2016)
-- Sevasti Qiriazi-Dako, *My Life* (IAPS, 2023)
-- Hosaflook, *Lëvizja Protestante te shqiptarët, 1816–1908* (IAPS, 2021)
+- Quanrud, *Gerasim Kyrias and the Albanian National Awakening, 1858–1894* (ISShP, 2016)
+- Sevasti Qiriazi-Dako, *My Life* (ISShP, 2023)
+- Hosaflook, *Lëvizja Protestante te shqiptarët, 1816–1908* (ISShP, 2021)
