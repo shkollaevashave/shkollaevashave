@@ -1,5 +1,5 @@
-{%- comment -%}Full-width photo banner. Set banner, banner_alt and banner_caption in a page's front matter.{%- endcomment -%}
-<figure class="banner">
-<img src="{{ page.banner | relative_url }}" alt="{{ page.banner_alt }}" width="800" height="477">
+{%- comment -%}Full-width photo banner. Set banner, banner_alt, banner_caption, and optionally banner_width/banner_height, in a page's front matter. Add banner_narrow: true for a low-resolution photo, so it isn't stretched past its own width.{%- endcomment -%}
+<figure class="banner{% if page.banner_narrow %} narrow{% endif %}">
+<img src="{{ page.banner | relative_url }}" alt="{{ page.banner_alt }}" width="{{ page.banner_width | default: 1600 }}" height="{{ page.banner_height | default: 1000 }}">
 {% if page.banner_caption %}<figcaption class="wrap">{{ page.banner_caption }}</figcaption>{% endif %}
 </figure>

@@ -1,17 +1,17 @@
 # One place for facts that appear on several pages.
 # Change them here and every page updates.
 
-name: "Shkolla e vashave"
-institute: "[EMRI I INSTITUTIT]"
+name: "Shkolla e Vashave"
+institute: "IAPS"
 
 address:
-  street: "[Rruga dhe numri]"
-  city: "[Qyteti]"
-  postcode: "[Kodi postar]"
+  street: "Rruga Stefan Andrea"
+  city: "Korçë"
+  postcode: ""
   country: "Shqipëri"
 
 email: "shkollaevashave@proton.me"
-phone: "+355 [numri]"
+phone: ""   # leave empty to hide the phone number everywhere
 
 # Pre-filled subject lines for email links
 trip_subject: "Kërkesë për udhëtim shkollor"

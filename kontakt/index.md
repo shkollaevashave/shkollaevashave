@@ -1,12 +1,13 @@
 ---
 title: Kontakt
 ---
+{%- assign i = site.data.info %}
 
-**Email:** [{{ site.data.info.email }}](mailto:{{ site.data.info.email }})
-
-**Telefon:** [{{ site.data.info.phone }}](tel:{{ site.data.info.phone | remove: ' ' }})
-
-**Adresa:** {{ site.data.info.address.street }}, {{ site.data.info.address.postcode }} {{ site.data.info.address.city }}
+**Email:** [{{ i.email }}](mailto:{{ i.email }})
+{% if i.phone != "" %}
+**Telefon:** [{{ i.phone }}](tel:{{ i.phone | remove: ' ' }})
+{% endif %}
+**Adresa:** {{ i.address.street }}, {% if i.address.postcode != "" %}{{ i.address.postcode }} {% endif %}{{ i.address.city }}
 
 Për udhëtime shkollore, shihni [faqen e rezervimeve](/udhetime-shkollore/).
 

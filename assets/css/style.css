@@ -1,3 +1,13 @@
+/* Fonts, hosted on this site (no Google tracking).
+   EB Garamond for headings: an old-style book face, close to 1890s print.
+   Source Sans 3 for body text: clear on phones.
+   Both cover Albanian ë and ç. Licences in assets/fonts/. */
+@font-face { font-family: "EB Garamond"; font-weight: 500; font-display: swap; src: url("../fonts/eb-garamond-latin-500-normal.woff2") format("woff2"); }
+@font-face { font-family: "EB Garamond"; font-weight: 600; font-display: swap; src: url("../fonts/eb-garamond-latin-600-normal.woff2") format("woff2"); }
+@font-face { font-family: "Source Sans 3"; font-weight: 400; font-display: swap; src: url("../fonts/source-sans-3-latin-400-normal.woff2") format("woff2"); }
+@font-face { font-family: "Source Sans 3"; font-weight: 400; font-style: italic; font-display: swap; src: url("../fonts/source-sans-3-latin-400-italic.woff2") format("woff2"); }
+@font-face { font-family: "Source Sans 3"; font-weight: 600; font-display: swap; src: url("../fonts/source-sans-3-latin-600-normal.woff2") format("woff2"); }
+
 /* Colours and type in one place. Change these to restyle the whole site. */
 :root {
   --paper: #f7f3ea;
@@ -7,8 +17,8 @@
   --accent-ink: #ffffff;
   --line: #ddd3c2;
   --card: #fffdf8;
-  --serif: Georgia, "Times New Roman", serif;
-  --sans: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --serif: "EB Garamond", Georgia, serif;
+  --sans: "Source Sans 3", system-ui, -apple-system, "Segoe UI", sans-serif;
   --width: 46rem;
 }
 @media (prefers-color-scheme: dark) {
@@ -28,8 +38,8 @@ body {
 main { padding-top: 2rem; padding-bottom: 3rem; }
 
 h1, h2, h3, .brand { font-family: var(--serif); line-height: 1.2; font-weight: 600; }
-h1 { font-size: clamp(1.9rem, 6vw, 2.6rem); margin: 0 0 .75rem; }
-h2 { font-size: 1.4rem; margin: 2rem 0 .5rem; }
+h1 { font-size: clamp(2.2rem, 7vw, 3rem); letter-spacing: -.005em; margin: 0 0 .75rem; }
+h2 { font-size: 1.6rem; margin: 2rem 0 .5rem; }
 a { color: var(--accent); text-underline-offset: 2px; }
 img { max-width: 100%; height: auto; display: block; }
 .intro { font-size: 1.2rem; color: var(--muted); }
@@ -42,7 +52,7 @@ img { max-width: 100%; height: auto; display: block; }
 /* Header */
 .site-header { border-bottom: 1px solid var(--line); background: var(--card); }
 .bar { display: flex; align-items: center; justify-content: space-between; gap: 1rem; min-height: 3.5rem; }
-.brand { color: var(--ink); text-decoration: none; font-size: 1.15rem; margin: 0; }
+.brand { color: var(--ink); text-decoration: none; font-size: 1.35rem; margin: 0; }
 .nav summary { cursor: pointer; list-style: none; padding: .4rem .7rem; border: 1px solid var(--line); border-radius: 6px; }
 .nav summary::-webkit-details-marker { display: none; }
 .nav ul { list-style: none; margin: 0; padding: 0; }
@@ -62,11 +72,27 @@ img { max-width: 100%; height: auto; display: block; }
 .button { display: inline-block; background: var(--accent); color: var(--accent-ink); padding: .65rem 1.1rem; border-radius: 6px; text-decoration: none; font-weight: 600; margin: .25rem .5rem .25rem 0; }
 .button.ghost { background: transparent; color: var(--accent); border: 1.5px solid var(--accent); }
 
-/* Banner photo: a dark band so the archive photo reads as a framed print.
-   Capped at 60rem wide because the current scan is only 800 px. */
+/* Banner photo: full width up to the photo's own 1600 px.
+   object-position keeps the building in frame when the height is capped. */
 .banner { margin: 0; background: #1c1a17; }
-.banner img { width: 100%; max-width: 60rem; margin: 0 auto; max-height: 72vh; object-fit: cover; object-position: center 65%; }
+.banner img { width: 100%; max-width: 100rem; margin: 0 auto; max-height: 70vh; object-fit: cover; object-position: center 55%; }
 .banner figcaption { color: #b9b0a2; font-size: .85rem; padding-top: .5rem; padding-bottom: .6rem; font-style: italic; }
+
+.banner.narrow img { max-width: 60rem; max-height: 72vh; object-position: center 65%; }
+.more { margin-top: 2rem; }
+
+/* "The building today" section on the home page */
+.today { margin: 0 0 2.5rem; }
+.today h2 { margin-top: 0; }
+.today figure { margin: 0 0 .75rem; }
+.today img { width: 100%; aspect-ratio: 3 / 2; object-fit: cover; border-radius: 4px; }
+/* On phones, let the photo break out of the side margins for more impact */
+@media (max-width: 40rem) { .today figure { margin-left: -16px; margin-right: -16px; } .today img { border-radius: 0; } .today figcaption { padding: 0 16px; } }
+
+/* A photo within the page, e.g. the archive photo on the home page */
+.feature { margin: 2.5rem 0 1rem; }
+.feature img { width: 100%; border-radius: 4px; }
+.feature figcaption { font-style: italic; }
 
 /* Home */
 .hero { padding: 1rem 0 1.5rem; border-bottom: 1px solid var(--line); margin-bottom: 1.5rem; }
@@ -75,7 +101,7 @@ img { max-width: 100%; height: auto; display: block; }
 
 /* Hours */
 .hours { width: 100%; border-collapse: collapse; background: var(--card); border: 1px solid var(--line); border-radius: 8px; }
-.hours caption { text-align: left; font-family: var(--serif); font-size: 1.3rem; font-weight: 600; padding-bottom: .5rem; }
+.hours caption { text-align: left; font-family: var(--serif); font-size: 1.5rem; font-weight: 600; padding-bottom: .5rem; }
 .hours th, .hours td { text-align: left; padding: .45rem .75rem; border-top: 1px solid var(--line); font-weight: normal; }
 .hours td { text-align: right; font-variant-numeric: tabular-nums; }
 .closed { color: var(--muted); }

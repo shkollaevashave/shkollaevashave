@@ -11,7 +11,7 @@ Only output on the home page.
   "name": {{ i.name | jsonify }},
   "url": {{ site.url | append: site.baseurl | jsonify }},
   "email": {{ i.email | jsonify }},
-  "telephone": {{ i.phone | jsonify }},
+  {% if i.phone != "" %}"telephone": {{ i.phone | jsonify }},{% endif %}
   "address": {
     "@type": "PostalAddress",
     "streetAddress": {{ i.address.street | jsonify }},
