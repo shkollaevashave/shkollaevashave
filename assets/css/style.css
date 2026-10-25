@@ -79,6 +79,10 @@ img { max-width: 100%; height: auto; display: block; }
 .banner figcaption { color: #b9b0a2; font-size: .85rem; padding-top: .5rem; padding-bottom: .6rem; font-style: italic; }
 
 .banner.narrow img { max-width: 60rem; max-height: 72vh; object-position: center 65%; }
+/* Whole photo, never cropped: sized to fit the screen height,
+   centred on the dark band. Used for the archive photo, where pupils
+   stand along the bottom edge. */
+.banner.whole img { width: auto; max-width: 100%; max-height: 80vh; object-fit: contain; }
 .more { margin-top: 2rem; }
 
 /* "The building today" section on the home page */
